@@ -1,0 +1,14 @@
+ name: First Workflow
+ on: [push]                    # run on every push
+ jobs:
+   say-hello:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Greet
+         run: echo "Hello from GitHub Actions! 🎉"
+       - name: Show the runner
+         run: |
+           echo "I am running on:"
+           uname -a
+           echo "Current directory:"
+           pwd
